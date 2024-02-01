@@ -36,7 +36,7 @@ import junit.framework.Assert;
 
 public class BaseClass {
 
-	public static FirefoxDriver driver;
+	public static WebDriver driver;
 	//public static ChromeDriver driver;
 
 	public REQPOM reqPOM;

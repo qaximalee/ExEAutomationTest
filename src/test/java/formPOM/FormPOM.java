@@ -1,44 +1,29 @@
 package formPOM;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v85.network.Network;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 
 import Utilities.BaseClass;
-import io.restassured.response.Response;
 import junit.framework.Assert;
 @Test
 public class FormPOM {
-	FirefoxDriver driver;
+	WebDriver driver;
 	//ChromeDriver driver;
 	BaseClass baseclass;
 	ChromeOptions option;
 
-	public FormPOM(FirefoxDriver driver) {
+	public FormPOM(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		driver.manage().window().maximize();

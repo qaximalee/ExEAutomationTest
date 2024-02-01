@@ -7,10 +7,22 @@ pipeline {
 
 	stages {
 
-		stage('Build'){
+		stage('Cleaning'){
 			steps {
-				sh "mvn clean test"
+				sh "mvn clean"
 			}
 		}
+
+		stage('Running Test'){
+        	steps {
+        	    sh "mvn test"
+            }
+        }
+
+        stage('Installing Build'){
+            steps {
+                sh "mvn install"
+            }
+        }
 	}
 }
